@@ -10,8 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build with Buildozer
+      - name: Build APK
         uses: ArtemSBulgakov/buildozer-action@v1
+        with:
+          command: buildozer android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
